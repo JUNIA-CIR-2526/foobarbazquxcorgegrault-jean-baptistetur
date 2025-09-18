@@ -16,11 +16,13 @@ public class Foo {
     }
 
     public void addBaz(Baz baz) {
-
+        Baz[] newBazs = new Baz[this.bazs.length + 1];
+        this.bazs = newBazs;
     }
 
     public void addGrault() {
-
+        Grault[] newGrauls = new Grault[this.grauls.length + 1];
+        this.grauls = newGrauls;
     }
 
     public Bar getBar() {
