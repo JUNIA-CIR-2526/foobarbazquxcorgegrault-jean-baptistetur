@@ -1,9 +1,9 @@
 package com.jad;
 
 public class Foo {
-    private Bar bar;
+    private final Bar bar;
     private Baz[] bazs;
-    private Qux qux;
+    private final Qux qux;
     private Corge corge;
     private Grault[] grauls;
 
@@ -15,37 +15,37 @@ public class Foo {
     }
 
     public void addBaz(Baz baz) {
-        Baz[] newBazs = new Baz[this.bazs.length + 1];
-        System.arraycopy(this.bazs, 0, newBazs, 0, this.bazs.length);
-        newBazs[this.bazs.length] = baz;
+//        Baz[] newBazs = new Baz[this.bazs.length + 1];
+//        System.arraycopy(this.bazs, 0, newBazs, 0, this.bazs.length);
+//        newBazs[this.bazs.length] = baz;
         this.bazs = newBazs;
     }
 
     public void addGrault() {
-        Grault[] newGrauls = new Grault[this.grauls.length + 1];
-        System.arraycopy(this.grauls, 0, newGrauls, 0, this.grauls.length);
-        newGrauls[this.grauls.length] = new Grault(this);
+//        Grault[] newGrauls = new Grault[this.grauls.length + 1];
+//        System.arraycopy(this.grauls, 0, newGrauls, 0, this.grauls.length);
+//        newGrauls[this.grauls.length] = new Grault(this);
         this.grauls = newGrauls;
     }
 
     public Bar getBar() {
-        return bar;
+        return this.bar;
     }
 
     public Baz[] getBazs() {
-        return bazs;
+        return this.bazs;
     }
 
     public Qux getQux() {
-        return qux;
+        return this.qux;
     }
 
     public Corge getCorge() {
-        return corge;
+        return this.corge;
     }
 
     public Grault[] getGrauls() {
-        return grauls;
+        return this.grauls;
     }
     public void setCorge(Corge corge) {
         this.corge = corge;
