@@ -1,5 +1,6 @@
 package com.jad;
 
-public class Bar {
-
+class Bar {
+    public Bar() {
+    }
 }

@@ -1,5 +1,6 @@
 package com.jad;
 
-public class Qux {
-
+class Qux {
+    public Qux() {
+    }
 }

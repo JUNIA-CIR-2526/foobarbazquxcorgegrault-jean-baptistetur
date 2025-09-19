@@ -1,18 +1,17 @@
 package com.jad;
 
-public class Foo {
+class Foo {
     private Bar bar;
     private Baz[] bazs;
     private Qux qux;
     private Corge corge;
     private Grault[] grauls;
 
-    public Foo(Bar bar, Baz[] bazs, Qux qux, Corge corge, Grault[] grauls) {
+    public Foo(Bar bar) {
         this.bar = bar;
-        this.bazs = bazs;
-        this.qux = qux;
-        this.corge = corge;
-        this.grauls = grauls;
+        this.qux = new Qux();
+        this.bazs = new Baz[0];
+        this.grauls = new Grault[0];
     }
 
     public void addBaz(Baz baz) {
@@ -30,24 +29,25 @@ public class Foo {
     }
 
     public Bar getBar() {
-        return this.bar;
+        return bar;
     }
 
     public Baz[] getBazs() {
-        return this.bazs;
+        return bazs;
     }
 
     public Qux getQux() {
-        return this.qux;
+        return qux;
     }
 
     public Corge getCorge() {
-        return this.corge;
+        return corge;
     }
 
     public Grault[] getGrauls() {
-        return this.grauls;
+        return grauls;
     }
+
 
     public void setBar(Bar bar) {
         this.bar = bar;
