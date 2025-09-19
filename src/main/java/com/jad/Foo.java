@@ -14,17 +14,17 @@ public class Foo {
         this.grauls = new Grault[0];
     }
 
-    public void addBaz(Baz baz) {
-        Baz[] newBazs = new Baz[this.bazs.length + 1];
-        System.arraycopy(this.bazs, 0, newBazs, 0, this.bazs.length);
-        newBazs[this.bazs.length] = baz;
-        this.bazs = newBazs;
-    }
+public void addBaz(Baz baz) {
+    Baz[] newBazs = new Baz[this.bazs.length + 1];
+    System.arraycopy(this.bazs, 0, newBazs, 0, this.bazs.length);
+    newBazs[this.bazs.length] = baz;
+    this.bazs = newBazs;
+}
 
     public void addGrault() {
-        Baz[] newBazs = new Baz[this.bazs.length + 1];
-        System.arraycopy(this.bazs, 0, newBazs, 0, this.bazs.length);
-        newBazs[this.bazs.length] = baz;
+        Grault[] newGrauls = new Grault[this.grauls.length + 1];
+        System.arraycopy(this.grauls, 0, newGrauls, 0, this.grauls.length);
+        newGrauls[this.grauls.length] = new Grault(this);
         this.grauls = newGrauls;
     }
 
