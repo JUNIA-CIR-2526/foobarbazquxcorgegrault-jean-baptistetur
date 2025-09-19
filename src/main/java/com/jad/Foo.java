@@ -20,7 +20,7 @@ public void addBaz(Baz baz) {
     this.bazs = newBazs;
 }
 
-    public void addGrault() {
+public void addGrault() {
         Grault[] newGrauls = new Grault[this.grauls.length + 1];
         newGrauls[this.grauls.length] = new Grault(this);
         this.grauls = newGrauls;
