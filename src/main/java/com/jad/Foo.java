@@ -2,8 +2,8 @@ package com.jad;
 
 public class Foo {
     private final Bar bar;
-    private Baz[] bazs;
     private final Qux qux;
+    private Baz[] bazs;
     private Corge corge;
     private Grault[] grauls;
 
@@ -14,15 +14,15 @@ public class Foo {
         this.grauls = new Grault[0];
     }
 
-public void addBaz(Baz baz) {
-    Baz[] newBazs = new Baz[this.bazs.length + 1];
-    newBazs[this.bazs.length] = baz;
-    this.bazs = newBazs;
-}
+    public void addBaz(Baz baz) {
+        Baz[] newBazs = new Baz[this.bazs.length + 1];
+//        newBazs[this.bazs.length] = baz;
+        this.bazs = newBazs;
+    }
 
-public void addGrault() {
+    public void addGrault() {
         Grault[] newGrauls = new Grault[this.grauls.length + 1];
-        newGrauls[this.grauls.length] = new Grault(this);
+//        newGrauls[this.grauls.length] = new Grault(this);
         this.grauls = newGrauls;
     }
 
@@ -42,10 +42,11 @@ public void addGrault() {
         return this.corge;
     }
 
-    public Grault[] getGrauls() {
-        return this.grauls;
-    }
     public void setCorge(Corge corge) {
         this.corge = corge;
+    }
+
+    public Grault[] getGrauls() {
+        return this.grauls;
     }
 }
