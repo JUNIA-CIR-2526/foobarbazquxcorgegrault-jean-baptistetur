@@ -1,6 +1,6 @@
 package com.jad;
 
-class Corge {
+public class Corge {
     private Foo foo;
 
     public Corge(Foo foo) {

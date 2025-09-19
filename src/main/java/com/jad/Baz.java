@@ -1,6 +1,6 @@
 package com.jad;
 
-class Baz {
+public class Baz {
     public Baz() {
     }
 }

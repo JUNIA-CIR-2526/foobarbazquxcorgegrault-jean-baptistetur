@@ -1,6 +1,6 @@
 package com.jad;
 
-class Grault {
+public class Grault {
     private Foo foo;
 
     public Grault(Foo foo) {

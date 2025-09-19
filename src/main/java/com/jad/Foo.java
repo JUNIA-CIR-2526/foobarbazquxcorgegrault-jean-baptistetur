@@ -1,6 +1,6 @@
 package com.jad;
 
-class Foo {
+public class Foo {
     private Bar bar;
     private Baz[] bazs;
     private Qux qux;
@@ -47,25 +47,7 @@ class Foo {
     public Grault[] getGrauls() {
         return grauls;
     }
-
-
-    public void setBar(Bar bar) {
-        this.bar = bar;
-    }
-
-    public void setBazs(Baz[] bazs) {
-        this.bazs = bazs;
-    }
-
-    public void setQux(Qux qux) {
-        this.qux = qux;
-    }
-
     public void setCorge(Corge corge) {
         this.corge = corge;
-    }
-
-    public void setGrauls(Grault[] grauls) {
-        this.grauls = grauls;
     }
 }
