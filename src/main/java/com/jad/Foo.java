@@ -11,8 +11,9 @@ public class Foo {
     private List<Grault> graults;
 
     public Foo(Bar bar) {
-        this.bar = bar;
+
         this.bazs = new ArrayList<>();
+        this.bar = bar;
         this.qux = new Qux();
         this.graults = new ArrayList<>();
     }
