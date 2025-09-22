@@ -20,7 +20,7 @@ public class Foo {
 
     public void addBaz(Baz baz) {
         this.bazs.add(baz);
-
+ 
     }
 
     public void addGrault() {
