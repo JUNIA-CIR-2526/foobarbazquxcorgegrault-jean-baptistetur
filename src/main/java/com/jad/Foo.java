@@ -1,52 +1,60 @@
 package com.jad;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Foo {
-    private final Bar bar;
-    private final Qux qux;
-    private Baz[] bazs;
+    private Bar bar;
+    private List<Baz> bazs;
+    private Qux qux;
     private Corge corge;
-    private Grault[] grauls;
+    private List<Grault> graults;
 
     public Foo(Bar bar) {
         this.bar = bar;
+        this.bazs = new ArrayList<>();
         this.qux = new Qux();
-        this.bazs = new Baz[0];
-        this.grauls = new Grault[0];
+        this.graults = new ArrayList<>();
     }
 
     public void addBaz(Baz baz) {
-        Baz[] newBazs = new Baz[this.bazs.length + 1];
-//        newBazs[this.bazs.length] = baz;
-        this.bazs = newBazs;
+        this.bazs.add(baz);
     }
 
     public void addGrault() {
-        Grault[] newGrauls = new Grault[this.grauls.length + 1];
-//        newGrauls[this.grauls.length] = new Grault(this);
-        this.grauls = newGrauls;
+        Grault grault = new Grault(this);
+        this.graults.add(grault);
     }
 
     public Bar getBar() {
-        return this.bar;
+        return bar;
     }
 
-    public Baz[] getBazs() {
-        return this.bazs;
+    public List<Baz> getBazs() {
+        return bazs;
     }
 
     public Qux getQux() {
-        return this.qux;
+        return qux;
     }
 
     public Corge getCorge() {
-        return this.corge;
+        return corge;
     }
 
     public void setCorge(Corge corge) {
+        if (this.corge != null) {
+            this.corge.setFoo(null);
+        }
+
         this.corge = corge;
+
+        if (corge != null) {
+            corge.setFoo(this);
+        }
     }
 
-    public Grault[] getGrauls() {
-        return this.grauls;
+    public List<Grault> getGraults() {
+        return graults;
     }
 }
